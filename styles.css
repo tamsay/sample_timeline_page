@@ -1,4 +1,4 @@
-*,.row,.col{
+*{
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
@@ -58,7 +58,7 @@ li{
 }
 #timelineHeader .timeline-categories{
     border: 2px solid red;
-    padding: 0.5em 1em;
+    padding: 0.5em 2em;
 }
 #timelineHeader ul{
     justify-content: space-between;
@@ -66,13 +66,24 @@ li{
     margin: 0%;
 }
 #timelineHeader li{
+    display: flex;
+    align-items: center;
     font-weight: bold;
+    padding: 0.25em 0.5em;
+}
+#timelineHeader li a{
+    color: #000;
+}
+#timelineHeader li a:hover{
+    text-decoration: none;
 }
 #timelineHeader li:hover{
     cursor: pointer;
+    background-color: whitesmoke;
 }
 #timelineHeader li i{
     margin-right: 0.375em;
+    font-size: 1.25em;
 }
 
 
@@ -80,6 +91,12 @@ li{
 #recent-posts-filter{
     margin-bottom: 1em;
     align-items: center;
+    width: fit-content;
+    padding: 0.25em 0.5em;
+}
+#recent-posts-filter:hover{
+    cursor: pointer;
+    background-color: white;
 }
 #recent-posts-filter i{
     margin-left: 0.25em;
@@ -110,23 +127,27 @@ li{
 }
 
 #timeline-body .action-bar{
-    padding: 0.375em 0em;
+    padding: 0.25em 0em;
     margin: 0em 1em 0.5em;
     border-top: 3px solid whitesmoke;
     border-bottom: 3px solid whitesmoke;
 }
 #timeline-body .action-bar ul{
+    align-items: center;
     justify-content: space-evenly;
     margin: 0%;
 }
 #timeline-body .action-bar li{
     font-weight: bold;
+    padding: 0.375em 0.5em;
 }
 #timeline-body .action-bar li:hover{
     cursor: pointer;
+    background-color: whitesmoke;
 }
 #timeline-body .action-bar li i{
     margin-right: 0.375em;
+    font-size: 1.25em;
 }
 
 #timeline-body .create-comment-div{
@@ -164,12 +185,183 @@ li{
     outline: none;
 }
 #timeline-body .comment-input i{
-    margin: 0em 0.375em;
+    margin: 0em 0.5em;
 }
 #timeline-body .comment-input i:hover{
     cursor: pointer;
+    font-size: 1.125em;
 }
 #timeline-body .posting-instruction{
     padding-left: 7.5%;
     font-weight: bold;
+}
+
+
+@media all and (max-width: 576px){
+    
+    .wrapper{
+        padding: 0.75em 0.5em;
+    }
+  
+    .timeline-title{
+        font-size: 1.75em;
+    }
+    /* Heading Section */
+    #timelineHeader{
+        border-radius: 10px;
+        padding: 0.75em;
+        margin-bottom: 1em;
+    }
+    #timelineHeader .heading{
+        margin-bottom: 0.5em;
+    }
+    #timelineHeader .heading-image-div{
+        width: 12.5%;
+        margin-right: 0.5em;
+    }
+    #timelineHeader .heading .image-thumbnail{
+        width: 100%;
+    }
+    #timelineHeader .heading-input-div{
+        flex-grow: 2;
+    }
+    #timelineHeader .heading input{
+        padding: 0.75em;
+    }
+    #timelineHeader .heading input::placeholder{
+        font-size: 0.875em;
+    }
+    #timelineHeader .timeline-categories{
+        padding: 0.25em 0.25em;
+    }
+    #timelineHeader ul{
+        margin: 0%;
+    }
+    #timelineHeader li{
+        padding: 0.25em 0.25em;
+        font-size: 0.875em;
+    }
+    #timelineHeader li a{
+        color: #000;
+    }
+    #timelineHeader li a:hover{
+        text-decoration: none;
+    }
+    #timelineHeader li i{
+        margin-right: 0.375em;
+        font-size: 1.125em;
+    }
+    
+    
+    /* Recent Posts filter section */
+    #recent-posts-filter{
+        margin-bottom: 1em;
+        padding: 0.25em 0.5em;
+        font-size: 0.875em;
+    }
+    #recent-posts-filter:hover{
+        cursor: pointer;
+        background-color: white;
+    }
+    #recent-posts-filter i{
+        margin-left: 0.25em;
+    }
+    
+    
+    
+    /* Timeline Body Section */
+    #timeline-body{
+        padding-bottom: 2em;
+    }
+    #timeline-body .post-image-div{
+        width: 100%;
+    }
+    #timeline-body .post-image-div .post-image{
+        width: 100%;
+    }
+    
+    #timeline-body .seen-count{
+        justify-content: flex-end;
+        padding: 0.75em 1em;
+    }
+    #timeline-body .seen-count p{
+        margin: 0%;
+        font-size: 0.875em;
+    }
+    
+    #timeline-body .action-bar{
+        padding: 0.25em 0em;
+        margin: 0em 0.5em 0.5em;
+        border-top: 3px solid whitesmoke;
+        border-bottom: 3px solid whitesmoke;
+    }
+    #timeline-body .action-bar ul{
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0%;
+    }
+    #timeline-body .action-bar li{
+        font-weight: bold;
+        padding: 0.375em 0.5em;
+        font-size: 0.875em;
+    }
+    #timeline-body .action-bar li:hover{
+        cursor: pointer;
+        background-color: whitesmoke;
+    }
+    #timeline-body .action-bar li i{
+        margin-right: 0.375em;
+        font-size: 1.25em;
+    }
+    
+    #timeline-body .create-comment-div{
+        display: flex;
+        flex-direction: column;
+        margin: 0em 0.5em;
+    }
+    #timeline-body .create-comment-div .comment-div{
+        display: flex;
+        align-items: center;
+        padding: 0em 0em;
+    }
+    #timeline-body .create-comment-div .comment-thumbnail{
+        width: 12.5%;
+        margin-right: 0.5em;
+    }
+    #timeline-body .create-comment-div .comment-thumbnail .image-thumbnail{
+        width: 100%;
+    }
+    #timeline-body .create-comment-div .comment-input{
+        flex-grow: 2;
+        border-radius: 50px;
+        width: 100%;
+        padding: 0.25em;
+        border: none;
+        background-color: whitesmoke;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #timeline-body .comment-input input{
+        flex-grow: 2;
+        border: none;
+        padding: 0.125em 0.5em;
+        background-color: transparent;
+        outline: none;
+    }
+    #timeline-body .comment-input input::placeholder{
+        font-size: 0.75em;
+    }
+    #timeline-body .comment-input i{
+        margin: 0em 0.375em;
+    }
+    #timeline-body .comment-input i:hover{
+        cursor: pointer;
+        font-size: 1.125em;
+    }
+    #timeline-body .posting-instruction{
+        padding-left: 12.5%;
+        font-weight: bold;
+        margin-top: 0.5em;
+        font-size: 0.75em;
+    }  
 }
