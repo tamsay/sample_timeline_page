@@ -67,6 +67,9 @@ li{
 #timelineHeader li{
     font-weight: bold;
 }
+#timelineHeader li:hover{
+    cursor: pointer;
+}
 #timelineHeader li i{
     margin-right: 0.375em;
 }
@@ -118,6 +121,9 @@ li{
 #timeline-body .action-bar li{
     font-weight: bold;
 }
+#timeline-body .action-bar li:hover{
+    cursor: pointer;
+}
 #timeline-body .action-bar li i{
     margin-right: 0.375em;
 }
@@ -158,6 +164,9 @@ li{
 }
 #timeline-body .comment-input i{
     margin: 0em 0.375em;
+}
+#timeline-body .comment-input i:hover{
+    cursor: pointer;
 }
 #timeline-body .posting-instruction{
     padding-left: 7.5%;
